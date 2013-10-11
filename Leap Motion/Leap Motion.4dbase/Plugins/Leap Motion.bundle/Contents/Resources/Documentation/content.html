@@ -1,0 +1,443 @@
+<html xmlns:date="http://exslt.org/dates-and-times">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./CSS/default.css">
+<title>Leap Motion</title>
+</head>
+<body>
+<h1>Leap Motion</h1>
+<p>
+<span class="title">Plugin Identifier: </span>20000</p>
+<p>
+<span class="title">Summary</span>
+</p>
+<ex4D:plugin-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for Leap Motion here -->
+<p>This plugin allows 4D to process <a href="https://www.leapmotion.com/">Leap Motion</a> gesture events.</p>
+<p>The SDK version is <a href="https://developer.leapmotion.com/">1.0.8.7665</a>.</p>
+</ex4D:plugin-description>
+<a name="command:1"></a>
+<h2>Gestures</h2>
+<a name="command:1,2"></a>
+<h3>LEAP Get listener</h3>
+<p>
+<code>success:=LEAP Get listener (eventType; methodName)</code>
+</p>
+<p>
+<code>eventType (LONGINT)</code>
+</p>
+<ex4D:argument argument-id="1" label="eventType" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $1 (LONGINT) here-->
+</ex4D:argument>
+<p>You can use a <a href="#constant:1">Leap Callback Types</a> constant for <code>eventType</code>.</p>
+<p>
+<code>methodName (TEXT)</code>
+</p>
+<ex4D:argument argument-id="2" label="methodName" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $2 (TEXT) here-->
+</ex4D:argument>
+<p>
+<code>success</code> (LONGINT)<br>
+<ex4D:return-value label="success" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get listener here -->
+</ex4D:command-description>
+<a name="command:1,1"></a>
+<h3>LEAP Set listener</h3>
+<p>
+<code>success:=LEAP Set listener (eventType; methodName)</code>
+</p>
+<p>
+<code>eventType (LONGINT)</code>
+</p>
+<ex4D:argument argument-id="1" label="eventType" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $1 (LONGINT) here-->
+</ex4D:argument>
+<p>You can use a <a href="#constant:1">Leap Callback Types</a> constant for <code>eventType</code>.</p>
+<p>
+<code>methodName (TEXT)</code>
+</p>
+<ex4D:argument argument-id="2" label="methodName" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $2 (TEXT) here-->
+</ex4D:argument>
+<p>
+<code>success</code> (LONGINT)<br>
+<ex4D:return-value label="success" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Set listener here -->
+</ex4D:command-description>
+<a name="command:2"></a>
+<h2>Settings</h2>
+<a name="command:2,5"></a>
+<h3>LEAP Get parameter</h3>
+<p>
+<code>success:=LEAP Get parameter (key; value)</code>
+</p>
+<p>
+<code>key (LONGINT)</code>
+</p>
+<ex4D:argument argument-id="1" label="key" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $1 (LONGINT) here-->
+</ex4D:argument>
+<p>You can use a <a href="#constant:3">Leap Parameters</a> constant for <code>key</code>.</p>
+<p>
+<code>value (REAL)</code>
+</p>
+<ex4D:argument argument-id="2" label="value" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $2 (REAL) here-->
+</ex4D:argument>
+<p>
+<code>success</code> (LONGINT)<br>
+<ex4D:return-value label="success" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get parameter here -->
+</ex4D:command-description>
+<a name="command:2,4"></a>
+<h3>LEAP Get policy</h3>
+<p>
+<code>policyFlag:=LEAP Get policy</code>
+</p>
+<p>
+<code>policyFlag</code> (LONGINT)<br>
+<ex4D:return-value label="policyFlag" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get policy here -->
+</ex4D:command-description>
+<a name="command:2,6"></a>
+<h3>LEAP Set parameter</h3>
+<p>
+<code>success:=LEAP Set parameter (key; value)</code>
+</p>
+<p>
+<code>key (LONGINT)</code>
+</p>
+<ex4D:argument argument-id="1" label="key" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $1 (LONGINT) here-->
+</ex4D:argument>
+<p>You can use a <a href="#constant:3">Leap Parameters</a> constant for <code>key</code>.</p>
+<p>
+<code>value (REAL)</code>
+</p>
+<ex4D:argument argument-id="2" label="value" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $2 (REAL) here-->
+</ex4D:argument>
+<p>
+<code>success</code> (LONGINT)<br>
+<ex4D:return-value label="success" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Set parameter here -->
+</ex4D:command-description>
+<a name="command:2,3"></a>
+<h3>LEAP Set policy</h3>
+<p>
+<code>success:=LEAP Set policy (policyFlag)</code>
+</p>
+<p>
+<code>policyFlag (LONGINT)</code>
+</p>
+<ex4D:argument argument-id="1" label="policyFlag" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for $1 (LONGINT) here-->
+</ex4D:argument>
+<p>
+<code>success</code> (LONGINT)<br>
+<ex4D:return-value label="success" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+<p>Always 1 (irrelevant). The API is asynchronous and subject to user approval.</p>
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Set policy here -->
+</ex4D:command-description>
+<a name="command:3"></a>
+<h2>Device</h2>
+<a name="command:3,11"></a>
+<h3>LEAP Get device horizontal</h3>
+<p>
+<code>horizontalAngle:=LEAP Get device horizontal</code>
+</p>
+<p>
+<code>horizontalAngle</code> (REAL)<br>
+<ex4D:return-value label="horizontalAngle" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (REAL) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get device horizontal here -->
+</ex4D:command-description>
+<a name="command:3,7"></a>
+<h3>LEAP Get device name</h3>
+<p>
+<code>name:=LEAP Get device name</code>
+</p>
+<p>
+<code>name</code> (TEXT)<br>
+<ex4D:return-value label="name" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get device name here -->
+</ex4D:command-description>
+<a name="command:3,10"></a>
+<h3>LEAP Get device range</h3>
+<p>
+<code>range:=LEAP Get device range</code>
+</p>
+<p>
+<code>range</code> (REAL)<br>
+<ex4D:return-value label="range" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (REAL) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get device range here -->
+</ex4D:command-description>
+<a name="command:3,8"></a>
+<h3>LEAP Get device vertical</h3>
+<p>
+<code>verticalAngle:=LEAP Get device vertical</code>
+</p>
+<p>
+<code>verticalAngle</code> (REAL)<br>
+<ex4D:return-value label="verticalAngle" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (REAL) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Get device vertical here -->
+</ex4D:command-description>
+<a name="command:3,9"></a>
+<h3>LEAP Is application frontmost</h3>
+<p>
+<code>isFrontmost:=LEAP Is application frontmost</code>
+</p>
+<p>
+<code>isFrontmost</code> (LONGINT)<br>
+<ex4D:return-value label="isFrontmost" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Is application frontmost here -->
+</ex4D:command-description>
+<a name="command:3,12"></a>
+<h3>LEAP Is device connected</h3>
+<p>
+<code>isConnected:=LEAP Is device connected</code>
+</p>
+<p>
+<code>isConnected</code> (LONGINT)<br>
+<ex4D:return-value label="isConnected" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP Is device connected here -->
+</ex4D:command-description>
+<a name="constant:1"></a>
+<h2>Leap Callback Types</h2>
+<p>
+<code><a name="constant:1,2"></a>LEAP_ON_GESTURE_SWIPE (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="LEAP_ON_GESTURE_SWIPE" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_GESTURE_SWIPE (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,3"></a>LEAP_ON_GESTURE_CIRCLE (4)</code>
+</p>
+<ex4D:constant constant-id="3" name="LEAP_ON_GESTURE_CIRCLE" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_GESTURE_CIRCLE (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,4"></a>LEAP_ON_GESTURE_SCREENTAP (5)</code>
+</p>
+<ex4D:constant constant-id="4" name="LEAP_ON_GESTURE_SCREENTAP" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_GESTURE_SCREENTAP (5) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,5"></a>LEAP_ON_GESTURE_KEYTAP (6)</code>
+</p>
+<ex4D:constant constant-id="5" name="LEAP_ON_GESTURE_KEYTAP" type="L" value="6" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_GESTURE_KEYTAP (6) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,6"></a>LEAP_ON_GETTING_FOCUS (101)</code>
+</p>
+<ex4D:constant constant-id="6" name="LEAP_ON_GETTING_FOCUS" type="L" value="101" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_GETTING_FOCUS (101) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,7"></a>LEAP_ON_LOSING_FOCUS (102)</code>
+</p>
+<ex4D:constant constant-id="7" name="LEAP_ON_LOSING_FOCUS" type="L" value="102" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_LOSING_FOCUS (102) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,1"></a>LEAP_ON_CONNECT (103)</code>
+</p>
+<ex4D:constant constant-id="1" name="LEAP_ON_CONNECT" type="L" value="103" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_CONNECT (103) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,8"></a>LEAP_ON_DISCONNECT (104)</code>
+</p>
+<ex4D:constant constant-id="8" name="LEAP_ON_DISCONNECT" type="L" value="104" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_ON_DISCONNECT (104) here-->
+</ex4D:constant>
+<a name="constant:2"></a>
+<h2>Leap Policy Flags</h2>
+<p>
+<code><a name="constant:2,1"></a>LEAP_POLICY_DEFAULT (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="LEAP_POLICY_DEFAULT" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_POLICY_DEFAULT (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,2"></a>LEAP_POLICY_BACKGROUND_FRAMES (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="LEAP_POLICY_BACKGROUND_FRAMES" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_POLICY_BACKGROUND_FRAMES (1) here-->
+</ex4D:constant>
+<a name="constant:3"></a>
+<h2>Leap Parameters</h2>
+<p>
+<code><a name="constant:3,1"></a>LEAP_CIRCLE_MIN_RADIUS (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="LEAP_CIRCLE_MIN_RADIUS" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_CIRCLE_MIN_RADIUS (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,2"></a>LEAP_CIRCLE_MIN_ARC (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="LEAP_CIRCLE_MIN_ARC" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_CIRCLE_MIN_ARC (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,3"></a>LEAP_SWIPE_MIN_LENGTH (2)</code>
+</p>
+<ex4D:constant constant-id="3" name="LEAP_SWIPE_MIN_LENGTH" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_SWIPE_MIN_LENGTH (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,4"></a>LEAP_SWIPE_MIN_VELOCITY (3)</code>
+</p>
+<ex4D:constant constant-id="4" name="LEAP_SWIPE_MIN_VELOCITY" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_SWIPE_MIN_VELOCITY (3) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,5"></a>LEAP_KEYTAP_MIN_VELOCITY (4)</code>
+</p>
+<ex4D:constant constant-id="5" name="LEAP_KEYTAP_MIN_VELOCITY" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_KEYTAP_MIN_VELOCITY (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,6"></a>LEAP_KEYTAP_HISTORY (5)</code>
+</p>
+<ex4D:constant constant-id="6" name="LEAP_KEYTAP_HISTORY" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_KEYTAP_HISTORY (5) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,7"></a>LEAP_KEYTAP_MIN_DISTANCE (6)</code>
+</p>
+<ex4D:constant constant-id="7" name="LEAP_KEYTAP_MIN_DISTANCE" type="L" value="6" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_KEYTAP_MIN_DISTANCE (6) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,8"></a>LEAP_SCREENTAP_MIN_VELOCITY (7)</code>
+</p>
+<ex4D:constant constant-id="8" name="LEAP_SCREENTAP_MIN_VELOCITY" type="L" value="7" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_SCREENTAP_MIN_VELOCITY (7) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,9"></a>LEAP_SCREENTAP_HISTORY (8)</code>
+</p>
+<ex4D:constant constant-id="9" name="LEAP_SCREENTAP_HISTORY" type="L" value="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_SCREENTAP_HISTORY (8) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,10"></a>LEAP_SCREENTAP_MIN_DISTANCE (9)</code>
+</p>
+<ex4D:constant constant-id="10" name="LEAP_SCREENTAP_MIN_DISTANCE" type="L" value="9" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_SCREENTAP_MIN_DISTANCE (9) here-->
+</ex4D:constant>
+<a name="constant:4"></a>
+<h2>Leap Motion States</h2>
+<p>
+<code><a name="constant:4,1"></a>LEAP_STATE_INVALID (-1)</code>
+</p>
+<ex4D:constant constant-id="1" name="LEAP_STATE_INVALID" type="L" value="-1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_STATE_INVALID (-1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,2"></a>LEAP_STATE_START (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="LEAP_STATE_START" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_STATE_START (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,3"></a>LEAP_STATE_UPDATE (2)</code>
+</p>
+<ex4D:constant constant-id="3" name="LEAP_STATE_UPDATE" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_STATE_UPDATE (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,4"></a>LEAP_STATE_STOP (3)</code>
+</p>
+<ex4D:constant constant-id="4" name="LEAP_STATE_STOP" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for LEAP_STATE_STOP (3) here-->
+</ex4D:constant>
+<p class="footer">
+<span class="title">Documentation Update: </span>2013-10-11T03:07:1309:00</p>
+</body>
+</html>
