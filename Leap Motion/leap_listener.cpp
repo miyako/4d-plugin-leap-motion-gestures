@@ -1,5 +1,15 @@
 #include "leap_listener.h"
 	
+leap::Controller::Controller()
+{
+
+}
+
+leap::Controller::~Controller()
+{
+
+}
+
 void MotionListener::onInit(const Leap::Controller& leap)
 {
 
@@ -493,7 +503,7 @@ void MotionListener::executeMethod(const Leap::Controller& leap)
 		
 		leap::SystemEvent event = *it;
 		
-		PA_Variable	params[0];
+		PA_Variable	params[1];
 		
 		unsigned int mId = this->getMethodIdForSystemEvent(event);
 		

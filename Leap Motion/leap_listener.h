@@ -25,6 +25,24 @@ namespace leap
 		LEAP_ON_CONNECT,
 		LEAP_ON_DISCONNECT		
 	}SystemEvent;	
+	
+	class Controller{
+	
+	public:
+		
+		Leap::Controller controller;
+		
+		Controller();
+		~Controller();
+		
+/*
+ on windows there seems to be a problem using a constructor at the global scope.
+ moreover, new Leap::Controller causes memory issues at deconstruction.
+ both specifically when used in a plugin (dll) context. 
+ no problems in an executable.
+ */
+		
+	};
 }
 
 class MotionListener : public Leap::Listener {

@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -302,7 +300,7 @@
 							<real>201</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>472 255 928 575 0 0 1440 878 </string>
+						<string>258 259 928 575 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -318,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>4DPlugin.cpp</string>
+								<string>leap_listener.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>4DPlugin.cpp</string>
+										<string>leap_listener.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D183026C1807A07E009F9456</string>
+										<string>D14346681807E1E0001B6563</string>
 										<key>history</key>
 										<array>
 											<string>D1FE555E1804049D0020E0DB</string>
@@ -345,9 +343,8 @@
 											<string>D18247BA18068C8D00CEBF06</string>
 											<string>D18247F21806983500CEBF06</string>
 											<string>D1A1153E180751710098C6FF</string>
-											<string>D1A1155B1807532A0098C6FF</string>
-											<string>D1A1159F180756E80098C6FF</string>
-											<string>D1A115C418075B510098C6FF</string>
+											<string>D14346581807E1C6001B6563</string>
+											<string>D14346591807E1C6001B6563</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -359,16 +356,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {720, 287}}</string>
+								<string>{{0, 0}, {720, 277}}</string>
 								<key>RubberWindowFrame</key>
-								<string>472 255 928 575 0 0 1440 878 </string>
+								<string>258 259 928 575 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>287pt</string>
+							<string>277pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -379,14 +378,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 292}, {720, 242}}</string>
+								<string>{{0, 282}, {720, 252}}</string>
 								<key>RubberWindowFrame</key>
-								<string>472 255 928 575 0 0 1440 878 </string>
+								<string>258 259 928 575 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>242pt</string>
+							<string>252pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -405,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D183026218079F7D009F9456</string>
+				<string>D14346441807E010001B6563</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D183026318079F7D009F9456</string>
+				<string>D14346451807E010001B6563</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -546,10 +545,10 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D1FE5557180404490020E0DB</string>
-		<string>/Users/miyako/Desktop/Leap Motion/Leap Motion.xcodeproj</string>
+		<string>/Users/miyako/github-miyako/4d-plugin-leap-motion-gestures/Leap Motion/Leap Motion.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>472 255 928 575 0 0 1440 878 </string>
+	<string>258 259 928 575 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -570,7 +569,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>leap_listener.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -587,6 +586,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -626,7 +627,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D1FE5557180404490020E0DB</string>
-				<string>D183026718079F7D009F9456</string>
+				<string>D14346491807E010001B6563</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

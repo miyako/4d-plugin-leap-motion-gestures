@@ -13,7 +13,7 @@
 namespace leap
 {
 	MotionListener listener;
-	Leap::Controller controller;
+	leap::Controller *controller;
 }
 
 void PluginMain(int32_t selector, PA_PluginParameters params)
@@ -39,10 +39,12 @@ void CommandDispatcher (int32_t pProcNum, sLONG_PTR *pResult, PackagePtr pParams
 		case kDeinitPlugin:
 		case kServerDeinitPlugin:
 			listenerLoopFinish();
+			delete leap::controller;
 			break;				
 
 		case kInitPlugin:
 		case kServerInitPlugin:
+			leap::controller = new leap::Controller();
 			leap::listener.init();
 			break;	
 			
@@ -123,7 +125,7 @@ void listenerBegin(){
 	
 	leap::listener.setProcessNumber(pId);
 	
-	leap::controller.addListener(leap::listener);
+	leap::controller->controller.addListener(leap::listener);
 }
 
 void listenerLoop(){
@@ -139,14 +141,14 @@ void listenerLoop(){
 		
 		if (!done){		
 			
-			leap::listener.executeMethod(leap::controller);
+			leap::listener.executeMethod(leap::controller->controller);
 			
 			PA_FreezeProcess(pId);
 			
 		}
 	}
 	
-	leap::controller.removeListener(leap::listener);
+	leap::controller->controller.removeListener(leap::listener);
 	
 	PA_KillProcess();
 	
@@ -194,7 +196,7 @@ void LEAP_Set_listener(sLONG_PTR *pResult, PackagePtr pParams)
 			case Leap::Gesture::TYPE_KEY_TAP:
 			case Leap::Gesture::TYPE_SCREEN_TAP:	
 				leap::listener.setMethodIdForGestureType(0, name, type);
-				leap::controller.enableGesture(type, false);
+				leap::controller->controller.enableGesture(type, false);
 				break;
 			default:
 				break;	
@@ -232,7 +234,7 @@ void LEAP_Set_listener(sLONG_PTR *pResult, PackagePtr pParams)
 				case Leap::Gesture::TYPE_KEY_TAP:
 				case Leap::Gesture::TYPE_SCREEN_TAP:
 					leap::listener.setMethodIdForGestureType(mId, name, type);
-					leap::controller.enableGesture(type, true);
+					leap::controller->controller.enableGesture(type, true);
 					break;
 				default:
 					break;					
@@ -303,7 +305,7 @@ void LEAP_Set_policy(sLONG_PTR *pResult, PackagePtr pParams)
 	Param1.fromParamAtIndex(pParams, 1);
 	
 	Leap::Controller::PolicyFlag policy = (Leap::Controller::PolicyFlag)Param1.getIntValue();
-	leap::controller.setPolicyFlags(policy); 
+	leap::controller->controller.setPolicyFlags(policy); 
 	
 	/*
 	 Policy changes are completed asynchronously 
@@ -321,7 +323,7 @@ void LEAP_Get_policy(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_LONGINT returnValue;
 	
-	returnValue.setIntValue(leap::controller.policyFlags());	
+	returnValue.setIntValue(leap::controller->controller.policyFlags());	
 	returnValue.setReturn(pResult);
 }
 
@@ -381,7 +383,7 @@ void LEAP_Get_parameter(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	if (getKeyStringForKey(key, keyString)){
 		
-		Param2.setDoubleValue(leap::controller.config().getFloat(keyString));
+		Param2.setDoubleValue(leap::controller->controller.config().getFloat(keyString));
 		returnValue.setIntValue(1);
 		
 	}
@@ -404,8 +406,8 @@ void LEAP_Set_parameter(sLONG_PTR *pResult, PackagePtr pParams)
 
 	if (getKeyStringForKey(key, keyString)){
 	
-		leap::controller.config().setFloat(keyString, Param2.getDoubleValue());
-		returnValue.setIntValue(leap::controller.config().save());
+		leap::controller->controller.config().setFloat(keyString, Param2.getDoubleValue());
+		returnValue.setIntValue(leap::controller->controller.config().save());
 	
 	}
 		
@@ -420,7 +422,7 @@ void LEAP_Get_device_name(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_TEXT returnValue;
 	
-	Leap::DeviceList devices = leap::controller.devices();
+	Leap::DeviceList devices = leap::controller->controller.devices();
 	
 	if(!devices.isEmpty()) {
 		
@@ -436,7 +438,7 @@ void LEAP_Get_device_vertical(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_REAL returnValue;
 	
-	Leap::DeviceList devices = leap::controller.devices();	
+	Leap::DeviceList devices = leap::controller->controller.devices();	
 	
 	if(!devices.isEmpty())
 		returnValue.setDoubleValue(devices[0].verticalViewAngle());
@@ -448,7 +450,7 @@ void LEAP_Get_device_range(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_REAL returnValue;
 	
-	Leap::DeviceList devices = leap::controller.devices();	
+	Leap::DeviceList devices = leap::controller->controller.devices();	
 	
 	if(!devices.isEmpty())
 		returnValue.setDoubleValue(devices[0].range());
@@ -460,7 +462,7 @@ void LEAP_Get_device_horizontal(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_REAL returnValue;
 	
-	Leap::DeviceList devices = leap::controller.devices();
+	Leap::DeviceList devices = leap::controller->controller.devices();
 	
 	if(!devices.isEmpty())
 		returnValue.setDoubleValue(devices[0].horizontalViewAngle());
@@ -472,7 +474,7 @@ void LEAP_Is_device_connected(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_LONGINT returnValue;
 	
-	returnValue.setIntValue(leap::controller.isConnected());
+	returnValue.setIntValue(leap::controller->controller.isConnected());
 	
 	returnValue.setReturn(pResult);
 }
@@ -481,7 +483,7 @@ void LEAP_Is_application_frontmost(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_LONGINT returnValue;
 	
-	returnValue.setIntValue(leap::controller.hasFocus());
+	returnValue.setIntValue(leap::controller->controller.hasFocus());
 	
 	returnValue.setReturn(pResult);
 }
