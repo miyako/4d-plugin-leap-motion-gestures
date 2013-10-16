@@ -16,6 +16,8 @@ void listenerLoop();
 void listenerLoopFinish();
 void listenerBegin();
 
+bool isListenerProcessAlive();
+
 // --- Gestures
 void LEAP_Set_listener(sLONG_PTR *pResult, PackagePtr pParams);
 void LEAP_Get_listener(sLONG_PTR *pResult, PackagePtr pParams);

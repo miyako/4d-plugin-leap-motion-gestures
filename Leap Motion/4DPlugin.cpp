@@ -117,7 +117,7 @@ void listenerBegin(){
 	CUTF8String processName = CUTF8String((const uint8_t *)"$Leap Motion Listener Process");
 	
 	C_TEXT name;
-	name.copyUTF8String(&processName);
+	name.setUTF8String(&processName);
 	
 	unsigned int pId = PA_NewProcess((void *)listenerLoop, -512*1024, (PA_Unichar *)name.getUTF16StringPtr());
 	
@@ -153,6 +153,29 @@ void listenerLoop(){
 	PA_KillProcess();
 	
 	leap::listener.init();
+}
+
+#pragma mark -
+
+bool isListenerProcessAlive()
+{
+	CUTF8String processName = CUTF8String((const uint8_t *)"$Leap Motion Listener Process");
+	
+	C_TEXT name;
+	name.setUTF8String(&processName);
+	
+	PA_Unistring uName = PA_CreateUnistring((PA_Unichar *)name.getUTF16StringPtr());
+	
+	PA_Variable args[1];
+	args[0] = PA_CreateVariable(eVK_Unistring);
+	PA_SetStringVariable(&args[0], &uName);
+	
+	int processId = PA_GetLongintVariable(PA_ExecuteCommandByID(372, args, 1));
+	
+	PA_DisposeUnistring(&uName);
+	PA_ClearVariable(&args[0]);
+	
+	return processId;
 }
 
 #pragma mark -
@@ -215,7 +238,9 @@ void LEAP_Set_listener(sLONG_PTR *pResult, PackagePtr pParams)
 		
 		if(mId){
 			
-			bool isActive = leap::listener.isActive();
+		//	bool isActive = leap::listener.isActive();
+		//could have been aborted, should test for process	
+			bool isActive = isListenerProcessAlive();
 			
 			switch (type) {
 					//system	
@@ -240,9 +265,11 @@ void LEAP_Set_listener(sLONG_PTR *pResult, PackagePtr pParams)
 					break;					
 			}
 			
-			if(!isActive) 
-				listenerBegin();
+			leap::listener.init();
 			
+			if(!isActive)
+				listenerBegin();
+
 			success = 1;
 			
 		}
